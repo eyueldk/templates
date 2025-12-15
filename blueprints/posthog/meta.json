@@ -1,0 +1,16 @@
+{
+  "id": "posthog",
+  "name": "PostHog",
+  "version": "latest",
+  "description": "PostHog is an open source product analytics platform. It helps you understand your users and your product.",
+  "logo": "posthog.svg",
+  "links": {
+    "github": "https://github.com/PostHog/posthog",
+    "website": "https://posthog.com/",
+    "docs": "https://posthog.com/docs"
+  },
+  "tags": [
+    "analytics",
+    "self-hosted"
+  ]
+}

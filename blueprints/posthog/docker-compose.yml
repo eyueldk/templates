@@ -160,7 +160,6 @@ services:
             service: proxy
         ports:
             - '8000'
-            - '443:443'
         volumes:
             - caddy-data:/data
             - caddy-config:/config

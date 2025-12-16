@@ -159,7 +159,8 @@ services:
             file: docker-compose.base.yml
             service: proxy
         ports:
-            - '8000'
+            - '80'
+            - '443'
         volumes:
             - caddy-data:/data
             - caddy-config:/config

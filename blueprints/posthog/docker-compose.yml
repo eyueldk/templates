@@ -164,9 +164,6 @@ services:
         volumes:
             - caddy-data:/data
             - caddy-config:/config
-        environment:
-            CADDY_TLS_BLOCK: ''
-            CADDY_HOST: 'http://$DOMAIN'
         depends_on:
             - web
     objectstorage:

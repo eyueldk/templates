@@ -1,0 +1,21 @@
+[
+  {
+    "id": "daytona",
+    "name": "Daytona",
+    "version": "latest",
+    "description": "Secure and elastic infrastructure for running AI-generated code. Self-host the full Daytona OSS stack with sandboxes, API, proxy, and OIDC.",
+    "logo": "daytona.png",
+    "links": {
+      "github": "https://github.com/daytonaio/daytona",
+      "website": "https://www.daytona.io/",
+      "docs": "https://www.daytona.io/docs/oss-deployment/"
+    },
+    "tags": [
+      "ai",
+      "ai-agents",
+      "developer-tools",
+      "open-source",
+      "self-hosted"
+    ]
+  }
+]

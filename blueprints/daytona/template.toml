@@ -1,0 +1,58 @@
+[variables]
+app_domain = "${domain}"
+proxy_domain = "${domain}"
+protocol = "https"
+
+[config]
+mounts = []
+
+[[config.domains]]
+serviceName = "api"
+port = 3000
+host = "${app_domain}"
+
+[[config.domains]]
+serviceName = "proxy"
+port = 4000
+host = "${proxy_domain}"
+
+[[config.domains]]
+serviceName = "dex"
+port = 5556
+host = "${app_domain}"
+path = "/dex"
+
+[config.env]
+DAYTONA_PUBLIC_URL = "${protocol}://${app_domain}"
+PROXY_PUBLIC_URL = "${protocol}://${proxy_domain}"
+PROXY_DOMAIN = "${proxy_domain}"
+PROXY_PROTOCOL = "${protocol}"
+DAYTONA_HOST = "${app_domain}"
+
+ENCRYPTION_KEY = "${password:32}"
+ENCRYPTION_SALT = "${password:32}"
+PROXY_API_KEY = "${password:32}"
+RUNNER_API_KEY = "${password:32}"
+SSH_GATEWAY_API_KEY = "${password:32}"
+HEALTH_CHECK_API_KEY = "${password:32}"
+OTEL_COLLECTOR_API_KEY = "${password:32}"
+
+DEX_ADMIN_EMAIL = "${email}"
+DEX_ADMIN_PASSWORD_HASH = "${password:32}"
+
+POSTGRES_USER = "daytona"
+POSTGRES_PASSWORD = "${password:32}"
+
+MINIO_ROOT_USER = "${username}"
+MINIO_ROOT_PASSWORD = "${password:32}"
+
+REGISTRY_USER = "${username}"
+REGISTRY_PASSWORD = "${password:32}"
+
+SMTP_HOST = "smtp.example.com"
+SMTP_PORT = "587"
+SMTP_EMAIL_FROM = "Daytona <no-reply@${app_domain}>"
+
+SSH_GATEWAY_PUBLIC_KEY = ""
+SSH_GATEWAY_PRIVATE_KEY = ""
+SSH_GATEWAY_HOST_KEY = ""
